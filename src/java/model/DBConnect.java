@@ -4,7 +4,7 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConnection {
+public class DBConnect {
 
     // Database URL, Username, and Password
     private static final String DB_URL = "jdbc:mysql://localhost:3306/mpms"; // Replace 'mpms' with your actual database name
@@ -49,7 +49,7 @@ public class DBConnection {
         Connection connection = null;
         try {
             // Establish a connection
-            connection = DBConnection.getConnection();
+            connection = DBConnect.getConnection();
             
             if (connection != null) {
                 System.out.println("Connected to the database successfully!");
@@ -58,7 +58,7 @@ public class DBConnection {
             e.printStackTrace();
         } finally {
             // Close the connection when done
-            DBConnection.closeConnection(connection);
+            DBConnect.closeConnection(connection);
         }
     }
 }
