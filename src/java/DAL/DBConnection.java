@@ -1,13 +1,13 @@
-package model;
+package DAL;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 
-public class DBConnect {
+public class DBConnection {
 
     // Database URL, Username, and Password
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/mpms"; // Replace 'mpms' with your actual database name
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/mpms2"; // Replace 'mpms' with your actual database name
     private static final String DB_USERNAME = "root"; // Replace with your MySQL username
     private static final String DB_PASSWORD = "12345678"; // Replace with your MySQL password
 
@@ -49,7 +49,7 @@ public class DBConnect {
         Connection connection = null;
         try {
             // Establish a connection
-            connection = DBConnect.getConnection();
+            connection = DBConnection.getConnection();
             
             if (connection != null) {
                 System.out.println("Connected to the database successfully!");
@@ -58,7 +58,7 @@ public class DBConnect {
             e.printStackTrace();
         } finally {
             // Close the connection when done
-            DBConnect.closeConnection(connection);
+            DBConnection.closeConnection(connection);
         }
     }
 }

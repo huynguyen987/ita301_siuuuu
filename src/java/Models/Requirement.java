@@ -1,6 +1,13 @@
-package entity;
+/*
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
+ * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
+ */
+package Models;
 
-import java.sql.Timestamp;
+/**
+ *
+ * @author mituz
+ */
 
 public class Requirement {
     private int reqId;
@@ -9,30 +16,19 @@ public class Requirement {
     private int complexityId;
     private int statusId;
     private String description;
-    private Timestamp createdAt;
-    private int createdById;
-    private Timestamp updatedAt;
-    private int updatedById;
 
-    // Constructors
     public Requirement() {
     }
-
-    public Requirement(int reqId, String title, int ownerId, int complexityId, int statusId, String description,
-                       Timestamp createdAt, int createdById, Timestamp updatedAt, int updatedById) {
+    
+    public Requirement(int reqId, String title, int ownerId, int complexityId, int statusId, String description) {
         this.reqId = reqId;
         this.title = title;
         this.ownerId = ownerId;
         this.complexityId = complexityId;
         this.statusId = statusId;
         this.description = description;
-        this.createdAt = createdAt;
-        this.createdById = createdById;
-        this.updatedAt = updatedAt;
-        this.updatedById = updatedById;
     }
 
-    // Getters and Setters
     public int getReqId() {
         return reqId;
     }
@@ -80,36 +76,5 @@ public class Requirement {
     public void setDescription(String description) {
         this.description = description;
     }
-
-    public Timestamp getCreatedAt() {
-        return createdAt;
-    }
-
-    public void setCreatedAt(Timestamp createdAt) {
-        this.createdAt = createdAt;
-    }
-
-    public int getCreatedById() {
-        return createdById;
-    }
-
-    public void setCreatedById(int createdById) {
-        this.createdById = createdById;
-    }
-
-    public Timestamp getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(Timestamp updatedAt) {
-        this.updatedAt = updatedAt;
-    }
-
-    public int getUpdatedById() {
-        return updatedById;
-    }
-
-    public void setUpdatedById(int updatedById) {
-        this.updatedById = updatedById;
-    }
+    
 }
