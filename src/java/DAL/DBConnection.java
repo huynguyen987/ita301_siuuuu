@@ -7,7 +7,7 @@ import java.sql.SQLException;
 public class DBConnection {
 
     // Database URL, Username, and Password
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/mpms2"; // Replace 'mpms' with your actual database name
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/mpms"; // Replace 'mpms' with your actual database name
     private static final String DB_USERNAME = "root"; // Replace with your MySQL username
     private static final String DB_PASSWORD = "12345678"; // Replace with your MySQL password
 
